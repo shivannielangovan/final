@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Staff Assessment Portal</title>
+
+  <link rel="stylesheet" href="../css/styles.css"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-clipboard2-pulse me-2"></i>Staff Assessment Portal
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-4 gap-2">
+          <li class="nav-item"><a class="nav-link active" href="#">All Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My Quizzes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Results</a></li>
+        </ul>
+        <div class="ms-auto d-flex align-items-center gap-3">
+          <input class="form-control form-control-sm bg-dark border-secondary text-white" style="width:200px;" type="search" placeholder="Search..."/>
+          <i class="bi bi-person-circle text-white fs-5"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="page-header d-flex align-items-center">
+    <h4>Dashboards</h4>
+    <button class="btn btn-create ms-auto">
+      <i class="bi bi-plus-lg me-1"></i>Start a Quiz
+    </button>
+  </div>
+
+  <!-- ── Filter Tabs + Controls ── -->
+  <div class="filter-bar">
+    <a href="#" class="nav-link">Recent</a>
+    <a href="#" class="nav-link">Owned by Me</a>
+    <a href="#" class="nav-link">Shared with Me</a>
+    <a href="#" class="nav-link active">All</a>
+    <div class="filter-right">
+      <label class="text-muted small mb-0">Group filter</label>
+      <select class="form-select form-select-sm" style="width:150px;">
+        <option>All Groups</option>
+        <option>Service Desk</option>
+        <option>CMDB</option>
+      </select>
+      <input class="form-control form-control-sm" style="width:180px;" type="search" placeholder="Search by name or group"/>
+    </div>
+  </div>
+
+  <!-- ── Card Grid ── -->
+  <div class="main-content">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-5 g-3">
+
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="project-card" onclick="window.location.href='../VRLQuiz/VRLQuiz.html'">
+          <div class="card-title">LTA-VRL</div>
+          <span class="badge badge-other">Other</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-bar-chart-line"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="project-card" onclick="window.location.href='../VRLQuiz/TSMNT.html'">
+          <div class="card-title">TSMNT</div>
+          <span class="badge badge-incident">Incident</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-exclamation-triangle"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="project-card" onclick="window.location.href='../VRLQuiz/mediacorp.html'">
+          <div class="card-title">Mediacorp</div>
+          <span class="badge badge-other">Other</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-box-seam"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="project-card" onclick="window.location.href='../VRLQuiz/ncse.html'">
+          <div class="card-title">NCSE</div>
+          <span class="badge badge-other">Other</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-telephone"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="project-card">
+          <div class="card-title">IRAS_ETRS</div>
+          <span class="badge badge-other">Other</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-card-checklist"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col">
+        <div class="project-card">
+          <div class="card-title">MHA_IVH</div>
+          <span class="badge badge-other">Other</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-clipboard-data"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col">
+        <div class="project-card">
+          <div class="card-title">MCCY_SYC_Infra_SD</div>
+          <span class="badge badge-cmdb">CMDB Dashboard</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-diagram-3"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col">
+        <div class="project-card">
+          <div class="card-title">Project 8</div>
+          <span class="badge badge-cmdb">CMDB Dashboard</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-pie-chart"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col">
+        <div class="project-card">
+          <div class="card-title">Project 9</div>
+          <span class="badge badge-cmdb">CMDB Dashboard</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-shield-check"></i></div>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="col">
+        <div class="project-card">
+          <div class="card-title">Project 10</div>
+          <span class="badge badge-incident">Incident</span>
+          <div class="card-meta">Viewer</div>
+          <div class="card-thumb"><i class="bi bi-lightning-charge"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  const searchInput = document.querySelector('.filter-right input[type="search"]');
+  const cards = document.querySelectorAll('.col');
+
+  searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase().trim();
+
+    cards.forEach(function(col) {
+      const title = col.querySelector('.card-title');
+      if (!title) return;
+      const text = title.textContent.toLowerCase();
+      col.style.display = query === '' || text.includes(query) ? '' : 'none';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+Question,CorrectAnswer,Reason
+A user who logs in using SingPass Individual is classified under [BLANK].,VRL-AO,Individual vehicle owners log in using SingPass Individual and are classified as Asset Owners (VRL-AO).
+A user who performs transactions on behalf of vehicle owners is classified under [BLANK].,VRL-ESA,Users performing transactions on behalf of vehicle owners are Electronic Service Agents (VRL-ESA).
+A user who uses LTALink with a Netrust token is classified under [BLANK].,VRL-ESA,LTALink users with a Netrust token are Electronic Service Agents (VRL-ESA).
+A user who accesses vehicle information for legal or insurance purposes is classified under [BLANK].,VRL-EA,Users accessing vehicle information for legal or insurance purposes are External Agencies (VRL-EA).
+A user who logs in via SingPass Business for organisational use is classified under [BLANK].,VRL-EA,SingPass Business logins for organisational use are classified as External Agencies (VRL-EA).
+A user who works in a government agency such as Traffic Police or HDB is classified under [BLANK].,VRL-GA,Staff from government agencies such as Traffic Police and HDB are classified as Government Agencies (VRL-GA).
+A user who manages heavy vehicle parking operations is classified under [BLANK].,VRL-HVPO,Users managing heavy vehicle parking operations are classified under VRL-HVPO.
+A user who accesses systems through the LTA intranet is classified under [BLANK].,VRL-LTA,Users accessing systems via the LTA intranet are internal LTA staff (VRL-LTA).
+A user whose User ID starts with LTA is classified under [BLANK].,VRL-LTA,A User ID starting with LTA indicates an internal LTA staff member (VRL-LTA).
+A user who is an individual vehicle owner is classified under [BLANK].,VRL-AO,Individual vehicle owners are classified as Asset Owners (VRL-AO).

@@ -1,0 +1,21 @@
+id,question,optionA,optionB,optionC,optionD,correct,reason
+m3_mcq_01,What is the main purpose of a COE?,To insure a vehicle,To allow ownership and use of a vehicle for 10 years,To calculate road tax,To allow vehicle modifications,B,COE gives the right to own and use a vehicle for 10 years
+m3_mcq_02,Which transactions commonly involve COE details?,Parking offences,"Vehicle ownership, renewal, transfer and deregistration",ERP charges,Driver licensing,B,COE appears in many ownership-related cases
+m3_mcq_03,When may a user receive a COE rebate?,After road tax renewal,When a vehicle is deregistered before COE expiry,After COE renewal,When e-Day Licence is cancelled,B,COE rebate depends on unused COE period at deregistration
+m3_mcq_04,What should agents NOT advise users about COE?,How to check COE status,Whether COE is mandatory,COE bidding prices or PQP advice,Where to view COE details,C,Pricing and bidding advice is not within agent scope
+m3_mcq_05,What can owners do when their COE is expiring?,Ignore it,Renew COE or deregister the vehicle,Transfer COE freely,COE auto-extends,B,Owners must choose to renew or deregister
+m3_mcq_06,Does COE renewal require bidding again?,Always,Sometimes,No — renewal is done by paying PQP,Only after expiry,C,Renewal does not involve bidding; PQP is paid instead
+m3_mcq_07,What happens if COE is not renewed within 1 month after expiry?,COE auto-renews,Vehicle must be deregistered,Only a warning is issued,Road tax is frozen,B,The vehicle must be deregistered after the grace period
+m3_mcq_08,What is road tax?,A traffic fine,A mandatory tax to use a vehicle on public roads,A vehicle registration fee,A COE payment,B,Road tax is required to legally use a vehicle on the road
+m3_mcq_09,Road tax can usually be renewed for which durations?,3 or 6 months,6 or 12 months,1 year only,2 years,B,Standard renewal periods are 6 or 12 months
+m3_mcq_10,What happens if road tax expires?,COE becomes invalid,Insurance cancels,Transactions may be blocked,Vehicle is auto-deregistered,C,Expired road tax can block LTALink transactions
+m3_mcq_11,Which may cause road tax renewal to fail?,COE renewed early,Outstanding fines,Vehicle colour,Ownership transfer,B,Fines can block renewal
+m3_mcq_12,What should agents NOT do for road tax issues?,Guide users to check status,Identify blockers,Calculate penalties,Escalate incorrect system status,C,Agents do not calculate penalties
+m3_mcq_13,What is common across all off-peak vehicle schemes?,Unlimited driving,Higher road tax,Restricted usage hours,Mandatory lay-up,C,All off-peak schemes have restricted usage hours
+m3_mcq_14,What must users do to drive an off-peak vehicle during restricted hours?,Renew COE,Pay extra road tax,Buy an e-Day Licence,Apply for lay-up,C,An e-Day Licence allows use during restricted hours
+m3_mcq_15,When can an e-Day Licence be cancelled or updated?,Anytime after use,Only after expiry,Before the stated deadline,Through Service Desk only,C,Changes to e-Day Licence must be made before the deadline
+m3_mcq_16,PARF rebate depends mainly on which factors?,Road tax amount,Vehicle age and ARF paid,Insurance history,COE category,B,PARF is calculated based on vehicle age and ARF paid
+m3_mcq_17,What is vehicle lay-up?,Permanent deregistration,A temporary non-usage status,An ownership transfer,An inspection status,B,Lay-up means the vehicle is temporarily off the road
+m3_mcq_18,What happens if a laid-up vehicle is not re-licensed after 3 years?,COE renews automatically,Auto deregistration occurs,PARF is granted,Road tax resumes,B,The vehicle is automatically deregistered after 3 years of lay-up
+m3_mcq_19,Ownership transfer must be completed within how many days?,3 days,5 days,7 days,14 days,C,Transfer must be completed within 7 days
+m3_mcq_20,What typically transfers together with a vehicle during ownership change?,Driver's licence,Road tax and applicable rebates,Insurance policy,Outstanding fines,B,Road tax and rebates follow the vehicle to the new owner

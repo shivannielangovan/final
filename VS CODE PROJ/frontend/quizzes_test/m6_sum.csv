@@ -1,0 +1,6 @@
+Question,CorrectAnswer,Reason
+"Issues related to registering a new vehicle, COE bidding, and vehicle number management are escalated to the [BLANK] AppSupport Team.",OR,BUC-01 and BUC-02 covering new vehicle ownership are handled by the OR AppSupport Team.
+"Road tax renewal, COE renewal, insurance records, lay-up, and vehicle inspection issues are handled by the [BLANK] AppSupport Team.",UL,BUC-07 to BUC-10 covering road use lifecycle functions fall under the UL AppSupport Team.
+"Cases involving payment collection, refunds, instalment plans, and finance codes are escalated to the [BLANK] AppSupport Team.",Fin,BUC-13 to BUC-15 covering revenue and financial transactions are handled by the Fin AppSupport Team.
+"Tagging, warrant creation, and enforcement or regulatory activity issues are routed to the [BLANK] AppSupport Team.",Enf,BUC-11 and BUC-12 covering enforcement activities are handled by the Enf AppSupport Team.
+"Issues with user account management, access control, and audit log retrieval fall under the [BLANK] AppSupport Team.",SVO,BUC-20 covering VRL operations support including user accounts is handled by the SVO AppSupport Team.

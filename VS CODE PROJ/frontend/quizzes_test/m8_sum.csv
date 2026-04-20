@@ -1,0 +1,11 @@
+Question,CorrectAnswer,Reason
+All case-related emails must include the [BLANK] in the email subject line.,Incident ID,The Incident ID must always be in the subject line to ensure proper case tracking.
+The email address [BLANK] must always be added to the CC list in every case email sent.,ltalink@ncs.com.sg,This shared mailbox must be CC'd in all outgoing case emails without exception.
+"When escalating a case, the agent must assign the case to the appropriate [BLANK] in Infinity and send an email to the support team.",support group,Both actions — assigning in Infinity and emailing the team — are mandatory for every escalation.
+The escalation email to the support team must include a summary of the issue and all [BLANK] steps already taken.,troubleshooting,The support team needs to know what has already been tried to avoid repeating steps.
+"When requesting more information from a user, the three standard items to ask for are the vehicle number, a screen capture of the [BLANK], and details of the transaction being performed.",error,These three pieces of information are required before the agent can investigate or escalate.
+"When acknowledging a user's email after they provide details, the agent should inform the user that the information will be [BLANK] and the agent will get back with findings.",reviewed,The acknowledgement email sets the user's expectation that their details are being looked into.
+"When reinstalling Netrust software, the first step is to [BLANK] the token before uninstalling old software.",unplug,The token must be unplugged first to avoid conflicts during the uninstallation process.
+"After reinstalling Netrust software, the user must [BLANK] the PC before attempting to log in again.",restart,A restart is required after installation for the software to take effect.
+"A user who cannot see the VPC function on LTALink should ask their [BLANK] Admin to assign the ""HV Park Operators"" role.",CorpPass,The HV Park Operators role is assigned through the CorpPass Admin portal.
+"After the support team receives an escalated case, the agent must ask them to update the [BLANK] on the case status.",Service Desk,The Service Desk must be kept informed of all escalated case updates.

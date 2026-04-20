@@ -1,0 +1,7 @@
+Question,CorrectAnswer,Reason
+"When troubleshooting Netrust Token login issues, the first step is always to clear the browser [BLANK] and cookies.",cache,Clearing cache and cookies is the standard first troubleshooting step before any other checks.
+"If a user has not logged in to LTALink for more than [BLANK] days, their account may be suspended.",90,Accounts inactive for over 90 days are subject to suspension.
+Netrust software should only be reinstalled after all other [BLANK] steps have been completed.,troubleshooting,Reinstallation must never be the first step — it is a last resort after all checks are done.
+"From 30 June 2026, all ESAs must log in to LTALink using [BLANK] for Business Users, as Netrust Tokens will no longer be supported.",SingPass,SingPass for Business Users is the mandatory login method for all ESAs from that date.
+"For the error CM00058 ""System is unable to process your request"", if the issue persists after basic troubleshooting, the agent must collect a screen capture of the error and the [BLANK] number.",vehicle,The vehicle number is one of the key details required before escalating a CM00058 error.
+

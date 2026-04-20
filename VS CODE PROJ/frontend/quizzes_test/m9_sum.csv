@@ -1,0 +1,6 @@
+Question,CorrectAnswer,Reason
+Issues resolved by clearing browser cache and cookies are categorised under Services > Browser > [BLANK].,Housekeeping,Housekeeping is the correct Product Category 3 for issues fixed by clearing cache and cookies.
+"If a user's Netrust Token account is suspended due to more than 90 days of inactivity, they must submit the [BLANK] Form to LTA for reactivation.",L01,The L01 Form is required for account reactivation when the account has been suspended.
+Business-related queries that are not technical issues should be categorised under Services > Business Rules > [BLANK].,Process and Procedure,Non-technical queries such as form submission guidance fall under Process and Procedure.
+"When logging a case for a first-time Netrust Token login issue, the correct categorisation under Netrust Token Admin is [BLANK].",Accounts Application,"First-time login issues use the Accounts Application sub-category, not Access Rights."
+"When escalating a business query to CSU, the logging template requires the agent to assign the case to the group [BLANK].",VRL-I-Customer_Service_Unit,All CSU escalations must be assigned to VRL-I-Customer_Service_Unit in the logging system.

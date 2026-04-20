@@ -1,0 +1,11 @@
+Question,CorrectAnswer,Reason
+"For error CM00058, the first step is to clear browser [BLANK] and cookies.",cache,Clearing cache and cookies is the first recommended step for CM00058.
+"If a user cannot proceed to the payment page during COE renewal, they should also check if their [BLANK] blocker is enabled.",popup,Disabling the popup blocker is a key troubleshooting step for payment page issues.
+Filenames uploaded to LTALink must contain only letters and numbers with no [BLANK].,spaces,Filenames with spaces cause the filename error on LTALink.
+"Error CM00078 ""No record found"" is triggered when the vehicle number or the registered [BLANK] ID is incorrect.",owner,CM00078 appears when the vehicle number or owner ID entered does not match records.
+"If a user insists their details are correct but CM00078 persists, the agent should refer the user to LTA [BLANK].",CSU,LTA CSU handles confirmation of vehicle and owner ID discrepancies.
+"To check prerequisites before road tax renewal, agents should use the ""Enquire Road Tax [BLANK]/Prerequisite(s) To Fulfil"" function.",Payable,This is the exact name of the function used to check road tax prerequisites.
+Error UL03077 can be investigated by checking the road tax amount under Enquire Road Tax Payable by [BLANK] Number.,Vehicle,The UL03077 error resolution requires checking the vehicle-specific road tax enquiry.
+Most road tax and payment issues are resolved by clearing browser cache or disabling the [BLANK] blocker.,popup,These two steps resolve the majority of common LTALink transaction issues.
+"In Google Chrome, popups are enabled by going to Privacy and security > Site Settings > Pop-ups and redirects, then selecting ""Sites can send [BLANK]"".",pop-ups,This is the exact setting wording in Chrome to allow popups.
+"In Microsoft Edge, clearing browsing data is found under Settings > Privacy, search & [BLANK].",services,"The full path in Edge is Settings > Privacy, search & services > Clear browsing data."

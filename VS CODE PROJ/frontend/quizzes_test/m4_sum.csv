@@ -1,0 +1,10 @@
+Question,CorrectAnswer,Reason
+ESAs are external organisations authorised to transact on [BLANK].,LTALink,ESAs are external organisations authorised to use LTALink.
+The preferred long-term login method for ESAs is [BLANK] for Business.,SingPass,SingPass for Business is the supported and future-proof method.
+Netrust Token login is temporary and is being [BLANK] out.,phased,Netrust Tokens are temporary and will be phased out.
+ESAs must not use Personal [BLANK] to log in to LTALink.,SingPass,"ESAs must use SingPass for Business, not Personal SingPass."
+"The Service Desk's role regarding Netrust software is to verify and [BLANK] users, not to install it.",guide,Agents do not install software; they verify and guide.
+"When an ESA reports ""No token detected"", the first check is whether the token is [BLANK] in.",plugged,Basic token detection should be checked first.
+"An expired Netrust [BLANK] can cause the error ""You are having problems accessing this page"".",certificate,Expired certificates can cause access issues.
+[BLANK] should not be the first troubleshooting step when login issues occur.,Reinstallation,Reinstallation should not be the first step.
+"If an ESA has not logged in for more than [BLANK] days, their account may be suspended.",90,Inactive accounts may be suspended after 90 days.
