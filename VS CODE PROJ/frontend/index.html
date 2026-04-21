@@ -1,40 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Staff Assessment Portal</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Inter',sans-serif; background:#f8f9fb; display:flex; justify-content:center; align-items:center; height:100vh; }
-    .container { text-align:center; background:#fff; padding:60px 80px; border-radius:16px; border:1px solid #e5e7eb; }
-    h1 { font-size:24px; color:#1a1d27; margin-bottom:8px; }
-    p { color:#888; margin-bottom:40px; font-size:14px; }
-    .cards { display:flex; gap:24px; justify-content:center; }
-    .card { padding:32px 40px; border:1px solid #e5e7eb; border-radius:12px; cursor:pointer; transition:all 0.2s; text-decoration:none; color:#1a1d27; display:block; }
-    .card:hover { border-color:#4f46e5; background:#eef2ff; }
-    .icon { font-size:36px; margin-bottom:12px; }
-    .card h2 { font-size:16px; font-weight:600; margin-bottom:4px; }
-    .card p { font-size:12px; color:#888; margin:0; }
+    body { font-family:'Inter',sans-serif; background:#f8f9fb; display:flex; justify-content:center; align-items:center; min-height:100vh; }
+    .card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:48px 56px; text-align:center; max-width:420px; width:100%; }
+    .logo { font-size:28px; margin-bottom:16px; }
+    h1 { font-size:22px; font-weight:600; color:#1a1d27; margin-bottom:8px; }
+    .subtitle { font-size:14px; color:#888; margin-bottom:32px; }
+    .spinner-wrap { display:flex; flex-direction:column; align-items:center; gap:16px; }
+    .spinner { width:32px; height:32px; border:3px solid #e5e7eb; border-top-color:#4f46e5; border-radius:50%; animation:spin 0.8s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .status { font-size:14px; color:#888; }
+    .btn-login { display:inline-block; background:#4f46e5; color:#fff; border:none; border-radius:8px; padding:12px 32px; font-size:15px; font-weight:500; cursor:pointer; text-decoration:none; margin-top:8px; width:100%; }
+    .btn-login:hover { background:#4338ca; }
+    .error-box { background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:12px 16px; font-size:13px; color:#b91c1c; margin-bottom:20px; display:none; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Staff Assessment Portal</h1>
-    <p>Select your role to continue</p>
-    <div class="cards">
-      <a class="card" href="navigation/navigation.html">
-        <div class="icon">🎯</div>
-        <h2>Agent</h2>
-        <p>Access quizzes & view your scores</p>
-      </a>
-      <a class="card" href="leaderboard.html">
-        <div class="icon">📊</div>
-        <h2>Project Lead</h2>
-        <p>View agent scoreboard</p>
-      </a>
-    </div>
+<div class="card">
+  <div class="logo">📋</div>
+  <h1>Staff Assessment Portal</h1>
+  <p class="subtitle">Sign in to continue</p>
+  <div class="error-box" id="errorBox"></div>
+  <div class="spinner-wrap" id="loadingState">
+    <div class="spinner"></div>
+    <p class="status" id="statusMsg">Checking authentication...</p>
   </div>
+  <div id="loginState" style="display:none;">
+    <a class="btn-login" id="loginBtn" href="#">Sign in with your account</a>
+    <p style="font-size:12px;color:#bbb;margin-top:16px;">You will be redirected to the secure login page</p>
+  </div>
+</div>
+
+<script>
+  const USER_POOL_ID = 'ap-southeast-1_apR1FHh8i';
+  const CLIENT_ID = '14m7mihpgstimnl4s1c7c0rheh';
+  const COGNITO_DOMAIN = 'https://ap-southeast-1apr1fhh8i.auth.ap-southeast-1.amazoncognito.com';
+  const REDIRECT_URI = 'https://main.d1zc4l6znsk08q.amplifyapp.com/index.html';
+  const REGION = 'ap-southeast-1';
+
+  function showError(msg) {
+    const box = document.getElementById('errorBox');
+    box.textContent = msg;
+    box.style.display = 'block';
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('loginState').style.display = 'block';
+  }
+
+  function setStatus(msg) {
+    document.getElementById('statusMsg').textContent = msg;
+  }
+
+  function parseJwt(token) {
+    try {
+      return JSON.parse(atob(token.split('.')[1].replace(/-/g,'+').replace(/_/g,'/')));
+    } catch(e) { return null; }
+  }
+
+  function redirectToLogin() {
+    const loginUrl = `${COGNITO_DOMAIN}/login?client_id=${CLIENT_ID}&response_type=code&scope=email+openid+profile&redirect_uri=${encodeURIComponent(REDIRECT_URI)}`;
+    document.getElementById('loginBtn').href = loginUrl;
+    document.getElementById('loadingState').style.display = 'none';
+    document.getElementById('loginState').style.display = 'block';
+  }
+
+  async function exchangeCodeForTokens(code) {
+    setStatus('Signing you in...');
+    const resp = await fetch(`${COGNITO_DOMAIN}/oauth2/token`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        grant_type: 'authorization_code',
+        client_id: CLIENT_ID,
+        code: code,
+        redirect_uri: REDIRECT_URI
+      })
+    });
+    if (!resp.ok) throw new Error('Token exchange failed');
+    return resp.json();
+  }
+
+  async function getUserGroups(accessToken) {
+    const resp = await fetch(`https://cognito-idp.${REGION}.amazonaws.com/${USER_POOL_ID}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-amz-json-1.1',
+        'X-Amz-Target': 'AmazonCognitoIdentityProvider.GetUser',
+        'Authorization': accessToken
+      },
+      body: JSON.stringify({ AccessToken: accessToken })
+    });
+    const idToken = parseJwt(accessToken);
+    return idToken?.['cognito:groups'] || [];
+  }
+
+  async function init() {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const storedToken = sessionStorage.getItem('id_token');
+
+    if (storedToken) {
+      const payload = parseJwt(storedToken);
+      if (payload && payload.exp * 1000 > Date.now()) {
+        setStatus('Redirecting...');
+        const groups = payload['cognito:groups'] || [];
+        if (groups.includes('ProjectLeads')) {
+          window.location.href = 'leaderboard.html';
+        } else {
+          window.location.href = 'navigation/navigation.html';
+        }
+        return;
+      } else {
+        sessionStorage.clear();
+      }
+    }
+
+    if (code) {
+      try {
+        window.history.replaceState({}, '', window.location.pathname);
+        const tokens = await exchangeCodeForTokens(code);
+        sessionStorage.setItem('id_token', tokens.id_token);
+        sessionStorage.setItem('access_token', tokens.access_token);
+
+        const payload = parseJwt(tokens.id_token);
+        const groups = payload?.['cognito:groups'] || [];
+
+        setStatus('Login successful! Redirecting...');
+        setTimeout(() => {
+          if (groups.includes('ProjectLeads')) {
+            window.location.href = 'leaderboard.html';
+          } else {
+            window.location.href = 'navigation/navigation.html';
+          }
+        }, 800);
+      } catch(e) {
+        showError('Login failed. Please try again.');
+      }
+    } else {
+      redirectToLogin();
+    }
+  }
+
+  init();
+</script>
 </body>
 </html>
